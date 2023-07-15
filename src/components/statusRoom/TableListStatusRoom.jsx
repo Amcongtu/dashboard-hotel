@@ -4,11 +4,12 @@ import Room from '../../service/room.service'
 
 import { setListRoomType } from '../../store/RoomType/roomType.reducer'
 import { useDispatch } from 'react-redux'
+import StatusRoomService from '../../service/statusRoom.service'
 
 
 
 
-const TableListRoomType = (props) => {
+const TableListStatusRoom = (props) => {
 
     const dispatch = useDispatch()
 
@@ -17,7 +18,7 @@ const TableListRoomType = (props) => {
 
     const getListRoomType = async () => {
         try {
-            const response = await Room.getAllRoom()
+            const response = await StatusRoomService.getAllStatusRoom()
             const temp =  await response
 
             console.log(temp)
@@ -130,4 +131,4 @@ const TableListRoomType = (props) => {
     };
     return <Table pagination={{ pageSize: 5, bottomRight: ["bottomRight"] }} rowSelection={rowSelection} columns={columns} dataSource={data} />;
 };
-export default TableListRoomType;
+export default TableListStatusRoom;

@@ -34,3 +34,7 @@ export const API_DELETE_EMPLOYEE = `${import.meta.env.VITE_API_URL}`+'/api/emplo
 //CUSTOMER
 export const API_GET_ALL_CUSTOMER = `${import.meta.env.VITE_API_URL}`+'/api/customer'
 export const API_CREATE_CUSTOMER = `${import.meta.env.VITE_API_URL}`+'/api/customer'
+
+//STATUS ROOM
+export const API_GET_ALL_STATUS_ROOM = `${import.meta.env.VITE_API_URL}` + '/api/status-room'
+export const API_CREATE_STATUS_ROOM = `${import.meta.env.VITE_API_URL}` + '/api/status-room'

@@ -49,7 +49,7 @@ function AddRoom(props) {
             }
 
             console.log(imgArrayCloud)
-            const response = await RoomService.postRoom({...values, image: imgArrayCloud,image_id: imgArrayCloudId,name: values.name, utilities_bath_room: values.utilities_bath_room, utilities_room: values.utilities_room, rooms: []})
+            const response = await RoomService.postRoom({...values, images: imgArrayCloud,image_public_id: imgArrayCloudId,name: values.name, utilities_bath_room: values.utilities_bath_room, utilities_room: values.utilities_room, rooms: []})
             
 
             if(response.status != 200)
